@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #12100e; }
+  * { box-sizing: border-box; }
+  a { color: oklch(0.66 0.17 28); text-decoration: none; }
+  a:hover { color: oklch(0.78 0.13 28); }
+  image-slot { image-rendering: pixelated; }
+  @keyframes rsPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+</style>
+</helmet>
+
+<div style="background:#12100e;color:#e6e1d8;font-family:'Space Mono',monospace;font-size:16px;line-height:1.65;min-height:100vh">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 40px;border-bottom:4px solid #000;background:#1a1714">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div style="width:22px;height:22px;background:oklch(0.62 0.19 28);box-shadow:inset -4px -4px 0 rgba(0,0,0,0.45),inset 4px 4px 0 rgba(255,255,255,0.18);animation:rsPulse 2.4s steps(2,end) infinite"></div>
+      <span style="font-family:'Press Start 2P',monospace;font-size:13px;letter-spacing:0.04em;color:#f4efe6">REDSTONE ENGINEERS</span>
+    </div>
+    <nav style="display:flex;gap:28px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
+      <a href="#servicios" style="color:#a8a096">Servicios</a>
+      <a href="#trabajos" style="color:#a8a096">Trabajos</a>
+      <a href="#proceso" style="color:#a8a096">Proceso</a>
+      <a href="#contacto" style="color:#a8a096">Contacto</a>
+    </nav>
+  </header>
+
+  <section style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center;padding:88px 40px 96px;max-width:1360px;margin:0 auto">
+    <div>
+      <div style="display:inline-block;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.66 0.17 28);border:2px solid oklch(0.5 0.12 28);padding:6px 12px;margin-bottom:28px">Granjas y circuitos por encargo</div>
+      <h1 style="font-family:'Press Start 2P',monospace;font-size:44px;line-height:1.35;margin:0 0 28px;color:#f7f2e9;text-wrap:pretty">Ingeniería de redstone para tu mundo</h1>
+      <p style="margin:0 0 36px;max-width:52ch;color:#bdb5aa;text-wrap:pretty">Diseñamos, construimos y documentamos granjas, clasificadores y sistemas de control en tu servidor. Cada entrega incluye esquema de cableado, tasas medidas en el sitio y un plan de mantenimiento.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px">
+        <a href="#contacto" style="font-family:'Press Start 2P',monospace;font-size:12px;padding:18px 26px;background:oklch(0.55 0.18 28);color:#12100e;border:4px solid #000;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.22)" style-hover="background:oklch(0.62 0.19 28)">PEDIR PRESUPUESTO</a>
+        <a href="#trabajos" style="font-family:'Press Start 2P',monospace;font-size:12px;padding:18px 26px;background:#26221e;color:#e6e1d8;border:4px solid #000;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.1)" style-hover="background:#302b26">VER TRABAJOS</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:40px;margin-top:52px;padding-top:32px;border-top:2px solid #2a2521;font-size:13px;color:#8d867c">
+        <div><span style="display:block;font-family:'Press Start 2P',monospace;font-size:18px;color:#f7f2e9;margin-bottom:8px">1.21</span>versión objetivo</div>
+        <div><span style="display:block;font-family:'Press Start 2P',monospace;font-size:18px;color:#f7f2e9;margin-bottom:8px">Java</span>edición soportada</div>
+        <div><span style="display:block;font-family:'Press Start 2P',monospace;font-size:18px;color:#f7f2e9;margin-bottom:8px">0 mods</span>solo vanilla</div>
+      </div>
+    </div>
+    <div style="position:relative;border:4px solid #000;background:#1c1815;box-shadow:inset -6px -6px 0 rgba(0,0,0,0.5),inset 6px 6px 0 rgba(255,255,255,0.08)">
+      <div style="position:relative;width:100%;aspect-ratio:4/3;padding:10px">
+        <image-slot id="rs-hero" shape="rect" fit="cover" placeholder="captura del build principal — 1600×1200"></image-slot>
+      </div>
+      <div style="border-top:2px solid #2a2521;padding:14px 18px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8d867c">Granja de hierro modular · 6 aldeanos · vista sur</div>
+    </div>
+  </section>
+
+  <section id="servicios" style="padding:80px 40px;border-top:4px solid #000;background:#171412">
+    <div style="max-width:1360px;margin:0 auto">
+      <h2 style="font-family:'Press Start 2P',monospace;font-size:22px;margin:0 0 12px;color:#f7f2e9">Servicios</h2>
+      <p style="margin:0 0 48px;color:#8d867c;font-size:14px;max-width:60ch">Trabajamos sobre tu mundo o en una copia de prueba antes de tocar nada.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:4px solid #000;background:#201c19;padding:28px;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.07)">
+          <div style="width:16px;height:16px;background:oklch(0.62 0.19 28);margin-bottom:20px"></div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 14px;color:#f7f2e9">Granjas de producción</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Hierro, oro, mobs, cultivos y bambú. Dimensionadas a la tasa por hora que necesites y con control de encendido.</p>
+        </div>
+        <div style="border:4px solid #000;background:#201c19;padding:28px;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.07)">
+          <div style="width:16px;height:16px;background:oklch(0.62 0.19 150);margin-bottom:20px"></div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 14px;color:#f7f2e9">Circuitos y lógica</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Puertas, memorias, temporizadores y secuenciadores. Cableado ordenado, etiquetado y accesible para reparaciones.</p>
+        </div>
+        <div style="border:4px solid #000;background:#201c19;padding:28px;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.07)">
+          <div style="width:16px;height:16px;background:oklch(0.62 0.19 28);margin-bottom:20px"></div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 14px;color:#f7f2e9">Almacenamiento</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Clasificadores por ítem, desbordes controlados y entrada única. Escalable por módulos sin rehacer la sala.</p>
+        </div>
+        <div style="border:4px solid #000;background:#201c19;padding:28px;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.07)">
+          <div style="width:16px;height:16px;background:oklch(0.62 0.19 150);margin-bottom:20px"></div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 14px;color:#f7f2e9">Auditoría de rendimiento</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Revisamos qué está costando ticks en tu servidor y proponemos reemplazos con la misma función y menos carga.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showGaleria }}" hint-placeholder-val="{{ true }}">
+  <section id="trabajos" style="padding:80px 40px;border-top:4px solid #000">
+    <div style="max-width:1360px;margin:0 auto">
+      <h2 style="font-family:'Press Start 2P',monospace;font-size:22px;margin:0 0 48px;color:#f7f2e9">Trabajos recientes</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+        <div style="border:4px solid #000;background:#1c1815;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.45)">
+          <div style="position:relative;width:100%;aspect-ratio:3/2;padding:8px">
+            <image-slot id="rs-w1" shape="rect" fit="cover" placeholder="clasificador 54 ítems"></image-slot>
+          </div>
+          <div style="padding:18px;border-top:2px solid #2a2521">
+            <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:#f7f2e9;margin-bottom:10px">Clasificador 54 ítems</div>
+            <div style="font-size:13px;color:#8d867c">Entrada única, desborde a fundición. 3 días de obra.</div>
+          </div>
+        </div>
+        <div style="border:4px solid #000;background:#1c1815;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.45)">
+          <div style="position:relative;width:100%;aspect-ratio:3/2;padding:8px">
+            <image-slot id="rs-w2" shape="rect" fit="cover" placeholder="granja de oro en el nether"></image-slot>
+          </div>
+          <div style="padding:18px;border-top:2px solid #2a2521">
+            <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:#f7f2e9;margin-bottom:10px">Granja de oro</div>
+            <div style="font-size:13px;color:#8d867c">Plataforma en el techo del Nether. 38k lingotes/hora medidos.</div>
+          </div>
+        </div>
+        <div style="border:4px solid #000;background:#1c1815;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.45)">
+          <div style="position:relative;width:100%;aspect-ratio:3/2;padding:8px">
+            <image-slot id="rs-w3" shape="rect" fit="cover" placeholder="puerta y ascensor de pistones"></image-slot>
+          </div>
+          <div style="padding:18px;border-top:2px solid #2a2521">
+            <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:#f7f2e9;margin-bottom:10px">Acceso a la base</div>
+            <div style="font-size:13px;color:#8d867c">Puerta oculta de pistones y ascensor de burbujas sincronizados.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="proceso" style="padding:80px 40px;border-top:4px solid #000;background:#171412">
+    <div style="max-width:1360px;margin:0 auto">
+      <h2 style="font-family:'Press Start 2P',monospace;font-size:22px;margin:0 0 48px;color:#f7f2e9">Cómo trabajamos</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+        <div style="border-top:4px solid oklch(0.55 0.18 28);padding-top:22px">
+          <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:oklch(0.66 0.17 28);margin-bottom:16px">01</div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 12px;color:#f7f2e9">Diagnóstico</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Nos pasas coordenadas y objetivo. Medimos el terreno, los chunks cargados y lo que ya tienes construido.</p>
+        </div>
+        <div style="border-top:4px solid oklch(0.55 0.18 28);padding-top:22px">
+          <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:oklch(0.66 0.17 28);margin-bottom:16px">02</div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 12px;color:#f7f2e9">Prototipo</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Montamos el módulo en un mundo de pruebas, medimos la tasa real y ajustamos antes de tocar tu mundo.</p>
+        </div>
+        <div style="border-top:4px solid oklch(0.55 0.18 28);padding-top:22px">
+          <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:oklch(0.66 0.17 28);margin-bottom:16px">03</div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 12px;color:#f7f2e9">Construcción</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Obra en tu servidor con horario acordado. Bloques de la paleta que elijas y cableado oculto pero accesible.</p>
+        </div>
+        <div style="border-top:4px solid oklch(0.55 0.18 28);padding-top:22px">
+          <div style="font-family:'Press Start 2P',monospace;font-size:11px;color:oklch(0.66 0.17 28);margin-bottom:16px">04</div>
+          <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;margin:0 0 12px;color:#f7f2e9">Entrega</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Esquema de cableado, tasas medidas, plan de mantenimiento y 30 días de ajustes incluidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showFaq }}" hint-placeholder-val="{{ true }}">
+  <section style="padding:80px 40px;border-top:4px solid #000">
+    <div style="max-width:900px;margin:0 auto">
+      <h2 style="font-family:'Press Start 2P',monospace;font-size:22px;margin:0 0 40px;color:#f7f2e9">Preguntas frecuentes</h2>
+      <div style="display:grid;gap:2px;background:#2a2521;border:4px solid #000">
+        <div style="background:#1c1815;padding:26px 28px">
+          <h3 style="font-family:'Space Mono',monospace;font-weight:700;font-size:15px;margin:0 0 10px;color:#f7f2e9">¿Trabajáis en Bedrock?</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">No. La lógica de redstone difiere lo suficiente como para no poder garantizar tasas, así que solo aceptamos Java.</p>
+        </div>
+        <div style="background:#1c1815;padding:26px 28px">
+          <h3 style="font-family:'Space Mono',monospace;font-weight:700;font-size:15px;margin:0 0 10px;color:#f7f2e9">¿Necesito darte permisos de operador?</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Solo permisos de construcción en la zona de obra. Si hace falta cargar chunks, lo pedimos por escrito antes.</p>
+        </div>
+        <div style="background:#1c1815;padding:26px 28px">
+          <h3 style="font-family:'Space Mono',monospace;font-weight:700;font-size:15px;margin:0 0 10px;color:#f7f2e9">¿Qué pasa si una actualización rompe el diseño?</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Avisamos de los módulos sensibles a versión en la entrega. Durante el primer año adaptamos el diseño al coste de material.</p>
+        </div>
+        <div style="background:#1c1815;padding:26px 28px">
+          <h3 style="font-family:'Space Mono',monospace;font-weight:700;font-size:15px;margin:0 0 10px;color:#f7f2e9">¿Ponéis vosotros los materiales?</h3>
+          <p style="margin:0;font-size:14px;color:#a8a096">Podemos hacerlo o partir de tu almacén. En el presupuesto van separados material y mano de obra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="contacto" style="padding:88px 40px;border-top:4px solid #000;background:#201c19">
+    <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center">
+      <div>
+        <h2 style="font-family:'Press Start 2P',monospace;font-size:26px;line-height:1.4;margin:0 0 20px;color:#f7f2e9">Cuéntanos qué quieres construir</h2>
+        <p style="margin:0;color:#a8a096;max-width:48ch">Escríbenos con la versión del servidor, el objetivo y una captura del sitio. Respondemos con una estimación de material y días de obra.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <a href="#contacto" style="font-family:'Press Start 2P',monospace;font-size:12px;padding:20px 26px;background:oklch(0.55 0.18 28);color:#12100e;border:4px solid #000;text-align:center;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.22)" style-hover="background:oklch(0.62 0.19 28)">ENTRAR AL DISCORD</a>
+        <a href="mailto:hola@redstone-engineers.example" style="font-family:'Press Start 2P',monospace;font-size:12px;padding:20px 26px;background:#12100e;color:#e6e1d8;border:4px solid #000;text-align:center;box-shadow:inset -4px -4px 0 rgba(0,0,0,0.4),inset 4px 4px 0 rgba(255,255,255,0.08)" style-hover="background:#1a1714">ESCRIBIR UN CORREO</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:32px 40px;border-top:4px solid #000;background:#12100e;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;font-size:12px;letter-spacing:0.06em;color:#6f685f">
+    <span>REDSTONE ENGINEERS · granjas y circuitos por encargo</span>
+    <span>Proyecto de aficionados. Sin relación con Mojang ni Microsoft.</span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGaleria&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;},&quot;showFaq&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showGaleria: this.props.showGaleria ?? true,
+      showFaq: this.props.showFaq ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
